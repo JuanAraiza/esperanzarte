@@ -1,0 +1,79 @@
+/*
+ * AdminLTE 4 stylesheet entry point.
+ *
+ * Published by `php artisan adminlte:install`. Add this file to your
+ * vite.config.js input array.
+ *
+ * Option A (default): import the prebuilt CSS — fastest, no SCSS toolchain.
+ */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'overlayscrollbars/overlayscrollbars.css';
+@import 'admin-lte/dist/css/adminlte.css';
+
+:root {
+  --bs-primary: #b53450;
+  --bs-primary-rgb: 181, 52, 80;
+  --bs-link-color: #b53450;
+  --bs-link-hover-color: #9c3149;
+  --bs-primary-text-emphasis: #9c3149;
+  --bs-primary-bg-subtle: #f8dbe2;
+  --bs-primary-border-subtle: #e8aab9;
+}
+
+[data-bs-theme='light'] {
+  --bs-primary: #b53450;
+  --bs-primary-rgb: 181, 52, 80;
+  --bs-link-color: #b53450;
+  --bs-link-hover-color: #9c3149;
+  --bs-primary-text-emphasis: #9c3149;
+  --bs-primary-bg-subtle: #f8dbe2;
+  --bs-primary-border-subtle: #e8aab9;
+}
+
+select.form-control,
+select.form-select,
+.select2-container--bootstrap4 .select2-selection {
+  --bs-body-color: #333;
+  color: #333 !important;
+}
+
+.select2-container--bootstrap4 .select2-results__option,
+.select2-container--bootstrap4 .select2-search__field,
+.select2-container--bootstrap4 .select2-results__option--highlighted[aria-selected] {
+  --bs-body-color: #333;
+  color: #333 !important;
+}
+
+.btn-primary {
+  --bs-btn-bg: #b53450 !important;
+  --bs-btn-border-color: #b53450;
+  --bs-btn-hover-bg: #9c3149;
+  --bs-btn-hover-border-color: #9c3149;
+  --bs-btn-active-bg: #9c3149;
+  --bs-btn-active-border-color: #9c3149;
+  --bs-btn-disabled-bg: #b53450;
+  --bs-btn-disabled-border-color: #b53450;
+}
+
+.alert-primary {
+  --bs-alert-color: #9c3149;
+  --bs-alert-bg: #f8dbe2;
+  --bs-alert-border-color: #e8aab9;
+}
+
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+ * Option B: compile from source to customise SCSS variables. Comment out
+ * the admin-lte CSS import above and use this instead (requires `sass`):
+ *
+ *   // resources/css/adminlte.scss
+ *   $primary: #6610f2;            // your overrides BEFORE the import
+ *   $lte-sidebar-width: 280px;
+ *   @import 'admin-lte/src/scss/adminlte';
+ *
+ * See https://adminlte.io/themes/v4/docs/customization.html
+ */
